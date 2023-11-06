@@ -12,6 +12,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { MenuComponent } from './components/menu/menu.component';
 import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { DataTablesModule } from "angular-datatables";
 
 
 const routes: Routes = [
@@ -63,7 +64,8 @@ const routes: Routes = [
   imports: [
     BrowserModule,
     AppRoutingModule,
-    RouterModule.forRoot(routes)
+    RouterModule.forRoot(routes),
+    DataTablesModule
   ],
   providers: [],
   bootstrap: [AppComponent]

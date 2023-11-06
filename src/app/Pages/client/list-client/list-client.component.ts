@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./list-client.component.css']
 })
 export class ListClientComponent implements OnInit {
-  dtOptions: any = {};
+  dtOptions: DataTables.Settings = {};
 
   ngOnInit(): void {
     this.dtOptions = {
