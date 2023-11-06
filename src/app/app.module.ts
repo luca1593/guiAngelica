@@ -10,6 +10,8 @@ import { InsertionsComponent } from './Pages/insertions/insertions.component';
 import { DashboardComponent } from './Pages/dashboard/dashboard.component';
 import { RouterModule, Routes } from '@angular/router';
 import { MenuComponent } from './components/menu/menu.component';
+import { HeaderComponent } from './components/header/header.component';
+import { FooterComponent } from './components/footer/footer.component';
 
 
 const routes: Routes = [
@@ -18,17 +20,29 @@ const routes: Routes = [
     children: [
       {
         path: 'tous-les-clients',
-        component: ListClientComponent
+        component: ListClientComponent,
+        data: {
+          title: "Tous les clients"
+        }
       },
       {
         path: 'payements',
-        component: PayementsComponent
+        component: PayementsComponent,
+        data: {
+          title: "Payements"
+        }
       },
       {
-        path: 'releve-de-compte', component: ReleveDeCompteComponent
+        path: 'releve-de-compte', component: ReleveDeCompteComponent,
+        data: {
+          title: "Relevé de compte"
+        }
       },
       {
-        path: 'insertions', component: InsertionsComponent
+        path: 'insertions', component: InsertionsComponent,
+        data: {
+          title: "Insertions"
+        }
       }
     ]
   }
@@ -42,7 +56,9 @@ const routes: Routes = [
     ReleveDeCompteComponent,
     InsertionsComponent,
     DashboardComponent,
-    MenuComponent
+    MenuComponent,
+    HeaderComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
