@@ -1,0 +1,13 @@
+<div class="card">
+    <div class="card-header">Navigation</div>
+    <div class="card-body">
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item" *ngFor="let sousMenu of menuProperties" 
+              [ngClass]="{'text-danger bg-primary color-white' : sousMenu.active, '': !sousMenu.active}">
+                <a href="javascript:void(0)" (click)="navigate(sousMenu)" [ngClass]="{'text-white' : sousMenu.active, '': !sousMenu.active}">
+                    <i class="{{sousMenu.icon}}"></i>&nbsp;{{sousMenu.titre}}
+                </a>
+            </li>
+        </ul>
+    </div>
+</div>
